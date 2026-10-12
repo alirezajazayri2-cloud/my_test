@@ -1,0 +1,28 @@
+{
+  "dominant_axis": "P",
+  "top_interests": [
+    {
+      "interest": "P",
+      "score": 7.9,
+      "color": "سبز 🟢",
+      "complement_color": "مشکی ⚫️",
+      "polarity": "غالب"
+    }
+  ],
+  "all_interests": [
+    {
+      "interest": "P",
+      "score": 7.9,
+      "color": "سبز 🟢",
+      "complement_color": "مشکی ⚫️",
+      "polarity": "غالب"
+    },
+    {
+      "interest": "R",
+      "score": 4.0,
+      "color": "قرمز 🔴",
+      "complement_color": "آبی 🔵",
+      "polarity": "میانه"
+    }
+  ]
+}
