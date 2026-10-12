@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#164ed5"><meta name="description" content="خودت را بهتر بشناس؛ آزمون رغبت‌های شغلی و پیشنهاد مسیر حرفه‌ای بر اساس پرسشنامه WAI.">
+  <title>من کی ام | کشف مسیر شغلی</title>
+  <script src="theme.js"></script><link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="scoring.js" defer></script><script src="profiles.js" defer></script><script src="app.js" defer></script>
+</head>
+<body data-page="questionnaire">
+  <a class="skip-link" href="#assessment">رفتن به پرسشنامه</a>
+  <noscript><p class="script-notice">برای پاسخ به پرسشنامه و محاسبه نتیجه، جاوااسکریپت مرورگر را فعال کن.</p></noscript>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="من کی ام، صفحه اصلی"><span class="brand-icon">م</span><span>من کی ام<span class="brand-caption">همراهِ مسیر تو</span></span></a>
+    <nav aria-label="ناوبری اصلی"><a class="nav-active" href="index.html" aria-current="page">آزمون خودشناسی</a><a href="results.html">نتیجه من</a></nav><button id="theme-toggle" class="theme-toggle" type="button" aria-label="فعال کردن حالت تاریک" aria-pressed="false">🌙</button>
+    <span class="header-note"><span class="status-dot"></span> یک قدم به خودت نزدیک‌تر</span>
+  </div></header>
+  <main>
+    <section class="hero container">
+      <div class="hero-copy"><span class="eyebrow"><span></span> مسیر حرفه‌ای تو، از شناخت خودت شروع می‌شود</span>
+        <h1>خودت را بشناس،<br><span>مسیرت را پیدا کن.</span></h1>
+        <p>علاقه‌هایت سرنخ‌های خوبی هستند. با آزمون رغبت‌های WAI،<br class="desktop-only"> آن‌ها را کشف کن و با ۵ مسیر شغلی متناسب با خودت آشنا شو.</p>
+        <a class="button primary" href="#assessment">شروع کشف مسیر <span aria-hidden="true">↙</span></a>
+        <div class="hero-facts"><span><b>۲۵۳</b> پرسش</span><i></i><span><b>۱۴</b> بُعد قابل سنجش</span></div>
+      </div>
+      <div class="hero-poem">
+        <p>هم ناطق و خاموشم<br>هم لوح خموشانم<br>هم خونم و هم شیرم<br>هم طفلم و هم پیرم<br>کیستم من<br>کیستم من، چیستم من</p>
+      </div>
+    </section>
+    <section class="assessment-area" id="assessment"><div class="container">
+      <div class="section-heading"><div><span class="eyebrow">کمی مکث، کمی خودشناسی</span><h2>از چیزی بگو که واقعاً هستی.</h2></div><span class="section-meta">پاسخ درست یا غلطی وجود ندارد</span></div>
+      <div class="assessment-grid">
+        <aside class="sidebar">
+          <div class="panel progress-panel"><div class="panel-title"><span>مسیر پیشرفت تو</span><span class="tiny-label">WAI</span></div>
+            <div class="progress-ring" id="progress-ring" role="progressbar" aria-label="پیشرفت پاسخ به پرسشنامه" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div><strong id="progress-percent">۰٪</strong><span>تکمیل شده</span></div></div>
+            <p class="progress-count" id="progress-count" aria-live="polite">۰ از ۲۵۳ پرسش پاسخ داده شده</p>
+            <div class="journey"><div class="journey-step active"><span>۱</span><div>شناخت علاقه‌ها<small>پاسخ به پرسشنامه</small></div></div><div class="journey-line"></div><div class="journey-step"><span>۲</span><div>کشف مسیرها<small>پروفایل و ۵ پیشنهاد شغلی</small></div></div></div>
+            <label class="jump-label" for="page-select" hidden>رفتن به بخش</label><select id="page-select" hidden></select>
+            <button class="button secondary review-progress" id="check-progress" type="button">بررسی پاسخ‌ها و نتیجه</button>
+          </div>
+          <div class="tip-card"><span class="tip-icon">✧</span><h3>خودِ واقعی‌ات باش</h3><p>بر اساس تجربه‌ها و ترجیح‌های امروزت پاسخ بده، نه چیزی که دوست داری در آینده باشی.</p><p>اگر پرسشی مناسب تو نیست، می‌توانی آن را بی‌پاسخ بگذاری.</p></div>
+          <p class="privacy-note"><span aria-hidden="true">♧</span> پاسخ‌ها فقط در همین مرورگر ذخیره می‌شوند و به سروری ارسال نمی‌شوند.</p>
+        </aside>
+        <div class="questionnaire-column">
+          <div class="panel questionnaire-panel">
+            <div class="form-header"><div><span class="eyebrow" id="page-eyebrow">همهٔ پرسش‌ها</span><h3 id="form-title" tabindex="-1">یک قدم برای شناخت بهتر</h3></div><span class="question-range" id="question-range"></span></div>
+            <div class="thin-progress"><span id="page-progress"></span></div>
+            <p class="form-guidance">برای هر پرسش یک گزینه انتخاب کن. پاسخ‌ها خودکار ذخیره می‌شوند و می‌توانی بعداً آن‌ها را تغییر بدهی. برای دیدن نتیجه، حداقل ۲۰۳ پرسش و یک پرسش از هر بُعد را پاسخ بده.</p>
+            <form id="question-form"><div id="questions"></div>
+              <div class="form-actions"><button class="button secondary" id="previous" type="button" hidden>→ بخش قبل</button><span id="page-counter" hidden></span><button class="button primary" id="next" type="submit">پایان و بررسی ←</button></div>
+            </form>
+          </div>
+          <div class="below-form"><span id="save-status" role="status">پاسخ‌ها به‌صورت خودکار ذخیره می‌شوند.</span><button class="text-button" id="reset" type="button">شروع دوباره</button></div>
+          <div class="finish-panel" id="finish-panel" hidden><h3 tabindex="-1" id="review-title">آماده‌ای مسیرهایت را ببینی؟</h3><p id="finish-summary"></p><p id="coverage-note"></p><div class="finish-actions"><button class="button primary" id="show-results">دیدن نتیجه و ۵ پیشنهاد شغلی ←</button><button class="button secondary" id="review">بررسی بی‌پاسخ‌ها</button></div><div id="unanswered-sections" class="unanswered-sections" aria-label="بخش‌های دارای پرسش بی‌پاسخ"></div></div>
+        </div>
+      </div>
+    </div></section>
+    <section class="container closing-note"><span>✦</span><div><h3>یک آزمون، شروع یک گفت‌وگو با خودت.</h3><p>نتیجه‌ها فرصتی برای بررسی علاقه‌ها هستند؛ انتخاب نهایی مسیر، با توست.</p></div><span class="closing-word">ادامه‌ات را کشف کن.</span></section>
+  </main>
+  <footer class="site-footer container"><span><b>من کی ام</b> · همراهِ مسیر تو</span><span>ساخته‌شده برای انتخاب‌های آگاهانه‌تر</span><span>خودشناسی، اولین قدم است.</span></footer>
+  <dialog id="reset-dialog"><h2>از ابتدا شروع می‌کنی؟</h2><p>پاسخ‌های ذخیره‌شده در این مرورگر پاک می‌شوند.</p><div class="finish-actions"><button class="button danger" id="confirm-reset">پاک کردن پاسخ‌ها</button><button class="button secondary" id="cancel-reset">ادامه آزمون</button></div></dialog>
+</body>
+</html>
